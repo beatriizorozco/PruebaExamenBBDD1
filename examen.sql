@@ -4,7 +4,8 @@ CREATE TABLE IF NOT EXISTS `suscripcion` (
   `cantidad` DECIMAL(5,2) NOT NULL,
   `fecha_pago` DATE NOT NULL,
   `tipo_pago` VARCHAR(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  CONSTRAINT fk_usuario_id FOREIGN KEY(`id_usuario`) REFERENCES `usuario`(`id_usuario`)
+  CONSTRAINT fk_usuario_id FOREIGN KEY(`id_usuario`) REFERENCES `usuario`(`id_usuario`),
+  PRIMARY KEY (`id_suscripcion`)
   ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 INSERT INTO `suscripcion`(`id_suscripcion`, `id_usuario`, `cantidad`, `fecha_pago`, `tipo_pago`)
