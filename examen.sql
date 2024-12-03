@@ -43,6 +43,15 @@ CREATE TABLE IF NOT EXISTS `libros` (
   PRIMARY KEY (`id_libro`)
   ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+  INSERT INTO `libros`(`id_libro`, `titulo`, `autor`, `año_publicacion`, `precio`)
+  VALUES
+    (1, 'El gran Gatsby', 'F. Scott Fitzgerald', 1925, 15.99),
+    (2, '1984', 'George Orwell', 1949, 12.50),
+    (3, 'Matar a un ruiseñor', 'Harper Lee', 1960, 18.75),
+    (4, 'Cien años de soledad', 'Gabriel García Márquez', 1967, 20.00),
+    (5, 'Don Quijote de la Mancha', 'Miguel de Cervantes', 1605, 25.30);
+
+
 INSERT INTO `suscripcion`(`id_suscripcion`, `id_usuario`, `cantidad`, `fecha_pago`, `tipo_pago`)
   VALUES
     (1, 1, 29.99, '2024-12-01', 'Tarjeta de crédito'),
