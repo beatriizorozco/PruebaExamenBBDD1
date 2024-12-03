@@ -9,8 +9,8 @@ CREATE TABLE IF NOT EXISTS `suscripcion` (
 
 INSERT INTO `suscripcion`(`id_suscripcion`, `id_usuario`, `cantidad`, `fecha_pago`, `tipo_pago`)
   VALUES
-    (101, 29.99, '2024-12-01', 'Tarjeta de crédito'),
-    (102, 19.99, '2024-12-02', 'PayPal'),
-    (103, 15.50, '2024-12-03', 'Transferencia bancaria'),
-    (104, 25.00, '2024-12-04', 'Tarjeta de débito'),
-    (105, 35.75, '2024-12-05', 'PayPal');
+    (1, 1, 29.99, '2024-12-01', 'Tarjeta de crédito'),
+    (2, 3, 19.99, '2024-12-02', 'PayPal'),
+    (3, 4, 15.50, '2024-12-03', 'Transferencia bancaria'),
+    (4, 2, 25.00, '2024-12-04', 'Tarjeta de débito'),
+    (5, 5, 35.75, '2024-12-05', 'PayPal');
