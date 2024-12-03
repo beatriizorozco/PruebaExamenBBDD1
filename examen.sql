@@ -1,3 +1,5 @@
+-- Estructurado de la tabla usuario
+
 DROP TABLE IF EXISTS `usuario`;
 
 CREATE TABLE IF NOT EXISTS `usuario` (
@@ -9,6 +11,15 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   `direccion` VARCHAR(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL 
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+-- Volcado de datos para la tabla `usuario`
+
+INSERT INTO `usuario` (`id_usuario`, `nombre_completo`, `fecha_nacimiento`, `email`, `telefono`, `direccion`) VALUES
+(1, 'Juan Pérez', '1990-05-15', 'juan.perez@example.com', '5551234567', 'Calle Principal 123, Ciudad A'),
+(2, 'Ana López', '1985-10-30', 'ana.lopez@example.com', '5559876543', 'Av. Central 456, Ciudad B'),
+(3, 'Carlos Martínez', '2000-03-20', 'carlos.martinez@example.com', '5556789123', 'Calle Secundaria 789, Ciudad C'),
+(4, 'María Gómez', '1995-07-25', 'maria.gomez@example.com', '5554567890', 'Plaza Mayor 101, Ciudad D'),
+(6, 'Diego Jimenez', '1990-05-15', 'diego.jimenez@example.com', '672998308', 'Calle Principal 123, Ciudad J');
+
 
 CREATE TABLE IF NOT EXISTS `suscripcion` (
   `id_suscripcion` INT NOT NULL AUTO_INCREMENT,
@@ -18,6 +29,7 @@ CREATE TABLE IF NOT EXISTS `suscripcion` (
   `tipo_pago` VARCHAR(20) CHARACTER SET utf8 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   CONSTRAINT fk_usuario_id FOREIGN KEY(`id_usuario`) REFERENCES `usuario`(`id_usuario`)
   ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
 
 CREATE TABLE IF NOT EXISTS `libros` (
   `id_libro` INT AUTO_INCREMENT NOT NULL,
